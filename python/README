@@ -1,0 +1,11 @@
+## Basic CUBO setup using micromamba and conda-forge
+
+### Build the docker (in this directory)
+
+docker build -f Dockerfile -t fieldvalai .
+
+
+### Run the docker
+
+docker run -it --rm -v $(pwd):/data --tmpfs /tmp_output fieldvalai bash
+
