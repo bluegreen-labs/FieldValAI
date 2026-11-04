@@ -4,8 +4,6 @@
 
 docker build -f Dockerfile -t fieldvalai .
 
-
 ### Run the docker
 
-docker run -it --rm -v $(pwd):/data --tmpfs /tmp_output fieldvalai bash
-
+docker run -it --rm -v $(pwd):/home/jovyan/work --tmpfs /tmp_output fieldvalai start-notebook.sh

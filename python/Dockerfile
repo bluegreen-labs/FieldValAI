@@ -1,7 +1,5 @@
-FROM mambaorg/micromamba:2.9.0
+# load base notebook
+FROM quay.io/jupyter/base-notebook
 
-COPY --chown=$MAMBA_USER:$MAMBA_USER env.yml /tmp/env.yml
-RUN micromamba install -y -n base -f /tmp/env.yml && \
-    micromamba clean --all --yes
-
-WORKDIR /data
+# install cubo with GEE dependencies
+RUN pip --no-cache-dir install cubo[ee]
