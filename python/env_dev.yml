@@ -1,0 +1,22 @@
+name: cubodev
+channels:
+  - conda-forge
+dependencies:
+  - python=3.14.10
+  - pyopenssl
+  - requests
+  - packaging
+  - earthengine-api
+  - xee
+  - matplotlib
+  - dask>=2023.7.0
+  - numpy
+  - pandas>=2.0.3
+  - planetary-computer
+  - pyproj
+  - pystac-client
+  - rasterio
+  - scipy>=1.12.0
+  - stackstac>=0.5.1
+  - xarray>=2024.10.0
+  - h5py

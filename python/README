@@ -1,9 +1,17 @@
-## Basic CUBO setup using micromamba and conda-forge
+## Basic CUBO setup using mamba and conda-forge
 
-### Build the docker (in this directory)
+Install MiniForge and run
 
-docker build -f Dockerfile -t fieldvalai .
+conda create -f env.yml
 
-### Run the docker
+activate the environment using:
 
-docker run -it --rm -v $(pwd):/home/jovyan/work --tmpfs /tmp_output fieldvalai start-notebook.sh
+conda activate fieldvalai
+
+## Google Earth Engine
+
+For access to GEE data follow the [GEE authentication instructions]().
+
+Authentication only needs to be done once, you will have to initialize each session with
+
+ee.Initialize(project = "project-id")
